@@ -46,6 +46,7 @@
       </div>
       <br class="my-4" />
       <p class="lead">
+        <!-- aboutnya warning -->
         <router-link class="btn btn-primary" to="/about"
           >Learn More</router-link
         >
@@ -80,7 +81,7 @@ export default {
       })
       .finally(() => (this.loading = false));
     axios
-      .get('https://www.themealdb.com/api/json/v1/1/random.php')
+      .get('https://www.themealdb.com/api/json/v1/1/search.php?s=Arrabiata')
       .then(response => {
         this.headers = response.data.meals;
       })
