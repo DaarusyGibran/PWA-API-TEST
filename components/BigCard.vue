@@ -1,15 +1,32 @@
 <template>
   <div class="container">
-    <div class="judulTabel">
-        <!-- <h2>Daftar List Tugas</h2> -->
-        <div class="jumbotron">
-          <h1 class="display-4">NUXT JS-PWA-API</h1>
-          <p class="lead">Membuat aplikasi Nuxt JS dengan menimplementasikan kosep PWA dan menggunakan API TheMealDB</p>
-          <p class="lead">Daarusy Gibran</p>
-          <hr class="my-4">
-          <a class="btn btn-primary btn-lg" href="#mulai" role="button">Get Started</a>
-      </div>
+    <div class="carousel">
+      <b-carousel id="carousel-1" v-model="slide"
+          :interval="4000"
+          controls
+          indicators
+          img-width="1024"
+          img-height="350"
+      >
+          <b-carousel-slide>
+              <template v-slot:img>
+              <img
+                  class="d-block img-fluid w-100 img-banner"
+                  src="../assets/image/food1.jpg"
+                  alt="image slot"
+              >
+              </template>
+          </b-carousel-slide>
+      </b-carousel>
+        <div class="textjumbo">          
+          <h1 class="display-4 text-white text-right">NUXT JS-PWA-API</h1>
+          <p class="lead text-white text-right">Membuat aplikasi Nuxt JS dengan menimplementasikan kosep PWA dan menggunakan API TheMealDB</p>
+          <p class="lead text-white text-right">Daarusy Gibran</p>
+          <p class="lead text-white text-right">_____________________________________________________________________________________</p>          
+          <a class="btn btn-primary btn-lg" style="margin-left:750px" href="#mulai" role="button">Get Started</a>
+        </div>
     </div>
+    <br>
     <div v-for="(header, index) in headers" :key="index" class="jumbotron" id="mulai">
       <h1 class="display-4">
         {{ header.strMeal }}
@@ -47,7 +64,7 @@
       <br class="my-4" />
       <p class="lead">
         <!-- aboutnya warning -->
-        <router-link class="btn btn-primary" to="/about"
+        <router-link class="btn btn-primary" to="#"
           >Learn More</router-link
         >
       </p>
@@ -95,4 +112,10 @@ export default {
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped></style>
+<style scoped>
+.textjumbo {
+  margin-top: -500px;
+  margin-left: 70px;
+  position: absolute;
+}
+</style>
