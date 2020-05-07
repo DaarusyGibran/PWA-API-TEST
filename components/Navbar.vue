@@ -32,25 +32,3 @@
   </b-navbar>
 </div>
 </template>
-<script>
-export default {
-    data() {
-        return {
-            meal: ''
-      
-        }
-    },
-  methods: {
-    getMeal() {
-     
-    }
-  }
-}    
-</script>
-<style  scoped>
-
-
-
-  
-
-</style>
