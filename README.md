@@ -1,6 +1,6 @@
 # pwa
 
-> My funkadelic Nuxt.js project
+> My First Nuxt.js project
 
 ## Build Setup
 
